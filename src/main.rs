@@ -1,4 +1,4 @@
-use minigrep::{run, Config};
+use minigrep::Config;
 use std::{env, process};
 
 fn main() {
@@ -8,7 +8,7 @@ fn main() {
         process::exit(1);
     });
 
-    if let Err(e) = run(cfg) {
+    if let Err(e) = minigrep::run(cfg) {
         println!("Application error: {e}");
         process::exit(1);
     }
